@@ -190,6 +190,7 @@ const PROJECTS = [
     name: "Connecting Waterloo Community (Part 1)",
     org: "SoWN / Coin Street, St John's Waterloo, Oasis Hub Waterloo, Bright Centres",
     locationType: "multi-site",
+    groupColor: "#15304d",
     photo: PLACEHOLDER_PHOTO,
     projectInfoUrl: null,
     sites: [
@@ -252,6 +253,7 @@ const PROJECTS = [
     name: "North Lambeth/Waterloo Community Resilience Hub (Part 2)",
     org: "SoWN / Coin Street, St John's Waterloo, Oasis Hub Waterloo, Bright Centres",
     locationType: "multi-site",
+    groupColor: "#5b7188",
     photo: PLACEHOLDER_PHOTO,
     projectInfoUrl: null,
     sites: [
@@ -331,6 +333,7 @@ const PROJECTS = [
     name: "Waterloo Parades",
     org: "TBC",
     locationType: "multi-site",
+    groupColor: "#b3bfcb",
     photo: PLACEHOLDER_PHOTO,
     projectInfoUrl: null,
     sites: [

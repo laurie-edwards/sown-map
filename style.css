@@ -1,12 +1,11 @@
 :root {
-  --cc-color: #0d9488;
-  --cc-color-dark: #0f766e;
-  --ncil-color: #ea580c;
-  --ncil-color-dark: #c2410c;
-  --ink: #1e293b;
-  --muted: #64748b;
-  --border: #e2e8f0;
-  --bg: #f8fafc;
+  --cc-color: #66c0de;
+  --ncil-color: #ed7e3a;
+  --ink: #15304d;
+  --muted: #5b7188;
+  --border: #d7dcd7;
+  --border-strong: #b3bfcb;
+  --bg: #f0f0f4;
   --panel-bg: #ffffff;
   --header-height: 56px;
   --panel-width: 320px;
@@ -152,9 +151,9 @@ body {
   color: #fff;
 }
 
-.badge-community-chest { background: var(--cc-color); }
+.badge-community-chest { background: var(--cc-color); color: var(--ink); }
 .badge-ncil { background: var(--ncil-color); }
-.badge-area-wide { background: var(--muted); }
+.badge-area-wide { background: var(--border-strong); color: var(--ink); }
 
 /* ── Leaflet pin icons ─────────────────────────────────────────────────── */
 

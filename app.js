@@ -3,8 +3,8 @@
 // multi-site groupings, the area-wide floating panel, and shared popup/modal detail.
 
 const PROGRAMME_META = {
-  "community-chest": { label: "Community Chest", color: "#0d9488" },
-  "ncil": { label: "NCIL", color: "#ea580c" }
+  "community-chest": { label: "Community Chest", color: "#66c0de" },
+  "ncil": { label: "NCIL", color: "#ed7e3a" }
 };
 
 function escapeHtml(str) {
@@ -45,7 +45,7 @@ function createPinIcon(project, siteIndex) {
 
 function createReferenceIcon() {
   const svg = `<svg viewBox="0 0 20 20" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="10" cy="10" r="7" fill="#94a3b8" stroke="#fff" stroke-width="2" stroke-dasharray="3 2" />
+    <circle cx="10" cy="10" r="7" fill="#b3bfcb" stroke="#fff" stroke-width="2" stroke-dasharray="3 2" />
   </svg>`;
   return L.divIcon({
     html: `<div class="pin-icon">${svg}</div>`,
