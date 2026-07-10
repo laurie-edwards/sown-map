@@ -1,0 +1,315 @@
+:root {
+  --cc-color: #0d9488;
+  --cc-color-dark: #0f766e;
+  --ncil-color: #ea580c;
+  --ncil-color-dark: #c2410c;
+  --ink: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --bg: #f8fafc;
+  --panel-bg: #ffffff;
+  --header-height: 56px;
+  --panel-width: 320px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+/* ── Header / filter toggle ───────────────────────────────────────────── */
+
+.topbar {
+  height: var(--header-height);
+  min-height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 16px;
+  background: var(--panel-bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topbar h1 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.filter-toggle {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--panel-bg);
+  color: var(--ink);
+  cursor: pointer;
+  min-height: 36px;
+}
+
+.filter-btn:hover { background: var(--bg); }
+
+.filter-btn.is-active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+/* ── Layout ────────────────────────────────────────────────────────────── */
+
+.layout {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+#map {
+  flex: 1;
+  min-height: 0;
+}
+
+#area-wide-panel {
+  width: var(--panel-width);
+  min-width: var(--panel-width);
+  background: var(--panel-bg);
+  border-left: 1px solid var(--border);
+  overflow-y: auto;
+  padding: 16px;
+}
+
+#area-wide-panel h2 {
+  font-size: 15px;
+  margin: 0 0 4px;
+}
+
+.panel-hint {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.area-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: var(--panel-bg);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.area-card:hover,
+.area-card:focus-visible {
+  border-color: var(--ink);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.area-card h4 {
+  margin: 6px 0 4px;
+  font-size: 14px;
+}
+
+.area-card p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ── Badges ────────────────────────────────────────────────────────────── */
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.badge-community-chest { background: var(--cc-color); }
+.badge-ncil { background: var(--ncil-color); }
+.badge-area-wide { background: var(--muted); }
+
+/* ── Leaflet pin icons ─────────────────────────────────────────────────── */
+
+.pin-icon { position: relative; }
+
+.pin-icon svg { display: block; overflow: visible; }
+
+.pin-badge-letter {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid var(--ink);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: center;
+  color: var(--ink);
+}
+
+.leaflet-tooltip.sown-tooltip {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 8px;
+}
+
+/* ── Popup / modal detail content (shared) ────────────────────────────── */
+
+.detail { width: 260px; max-width: 80vw; }
+
+.detail-photo {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  display: block;
+}
+
+.detail-body { padding: 12px 2px 2px; }
+
+.detail-body h3 {
+  font-size: 15px;
+  margin: 8px 0 4px;
+  line-height: 1.3;
+}
+
+.detail-org {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+
+.detail-site-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 10px;
+  font-style: italic;
+}
+
+.btn-project-info {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-project-info[aria-disabled="true"] {
+  background: var(--border);
+  color: var(--muted);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.leaflet-popup-content-wrapper { border-radius: 10px; }
+.leaflet-popup-content { margin: 0; }
+.leaflet-popup-content .detail-photo { border-radius: 8px 8px 0 0; }
+
+/* ── Modal (area-wide cards) ──────────────────────────────────────────── */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 16px;
+}
+
+.modal-overlay[hidden] { display: none; }
+.modal-overlay:not([hidden]) { display: flex; }
+
+.modal {
+  position: relative;
+  background: var(--panel-bg);
+  border-radius: 12px;
+  max-width: 320px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal .detail { width: 100%; }
+
+.modal .detail-body { padding: 12px 16px 16px; }
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    min-height: auto;
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .filter-toggle { justify-content: center; }
+
+  .layout { flex-direction: column; }
+
+  #map {
+    height: 55vh;
+    min-height: 320px;
+    flex: none;
+  }
+
+  #area-wide-panel {
+    width: 100%;
+    min-width: 0;
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+}

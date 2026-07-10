@@ -1,0 +1,15 @@
+{
+  "Archbishop's Park, Lambeth Road, London SE1": {"lat": 51.4968157, "lng": -0.1170284},
+  "Garden Museum, St Mary-at-Lambeth, Lambeth Palace Road, London SE1": {"lat": 51.4948515, "lng": -0.1197895},
+  "Barley Mow Clinic, Greet House, Frazier Street, London SE1 7BD": {"lat": 51.5000663, "lng": -0.1103774},
+  "Hatfields Football Pitches, Hatfields, London SE1": {"lat": 51.5050017, "lng": -0.1063826},
+  "Greet Street, London SE1": {"lat": 51.5037836, "lng": -0.1073780},
+  "Victory Square, London SE1": {"lat": 51.4970736, "lng": -0.1134354, "note": "Approximate — Nominatim has no direct match for Victory Square Gardens; pinned at the adjacent Cosser Street junction."},
+  "Emma Cons Gardens, The Cut / Waterloo Road, London SE1": {"lat": 51.5025357, "lng": -0.1098650},
+  "Bernie Spain Gardens North, Upper Ground, South Bank, London SE1": {"lat": 51.5074640, "lng": -0.1094790},
+  "Jubilee Gardens, London SE1": {"lat": 51.5039398, "lng": -0.1181769},
+  "Bayliss Road, London SE1": {"lat": 51.5007850, "lng": -0.1107216},
+  "Waterloo Millennium Green, Baylis Road, Lambeth, London SE1 7AA": {"lat": 51.5015771, "lng": -0.1098803},
+  "Royal Street, London SE1": {"lat": 51.4986173, "lng": -0.1157240, "note": "Auto-geocode matched a Tooley Street postbox in Bermondsey; corrected to the real Royal Street near Lambeth North."},
+  "Morley Street, London SE1": {"lat": 51.4984467, "lng": -0.1095236, "note": "Auto-geocode matched an unrelated fast-food outlet on Great Dover Street; corrected to the real Morley Street, Waterloo."}
+}
